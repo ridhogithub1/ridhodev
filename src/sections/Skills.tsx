@@ -1,11 +1,68 @@
 import { motion } from 'framer-motion'
+import { 
+  SiReact, 
+  SiJavascript, 
+  SiHtml5, 
+  SiCss3,
+  SiLaravel,
+  SiPhp,
+  SiDotnet,
+  SiKotlin,
+  SiReact as SiReactNative,
+  SiTensorflow,
+  SiPython,
+  SiGit,
+  SiFigma,
+  SiPostgresql
+} from 'react-icons/si'
 
-const groups: { title: string; items: string[] }[] = [
-  { title: 'Frontend', items: ['React.js', 'JavaScript', 'HTML', 'CSS'] },
-  { title: 'Backend', items: ['Laravel', 'PHP', 'ASP.NET'] },
-  { title: 'Mobile', items: ['Kotlin (Android)', 'React Native'] },
-  { title: 'AI/ML', items: ['TensorFlow', 'Python'] },
-  { title: 'Tools', items: ['Git', 'Figma', 'SSIS', 'SQL Server', 'PostgreSQL'] },
+type SkillItem = {
+  name: string
+  icon: React.ComponentType<{ className?: string }>
+}
+
+const groups: { title: string; items: SkillItem[] }[] = [
+  { 
+    title: 'Frontend', 
+    items: [
+      { name: 'React.js', icon: SiReact },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'HTML', icon: SiHtml5 },
+      { name: 'CSS', icon: SiCss3 }
+    ]
+  },
+  { 
+    title: 'Backend', 
+    items: [
+      { name: 'Laravel', icon: SiLaravel },
+      { name: 'PHP', icon: SiPhp },
+      { name: 'ASP.NET', icon: SiDotnet }
+    ]
+  },
+  { 
+    title: 'Mobile', 
+    items: [
+      { name: 'Kotlin (Android)', icon: SiKotlin },
+      { name: 'React Native', icon: SiReactNative }
+    ]
+  },
+  { 
+    title: 'AI/ML', 
+    items: [
+      { name: 'TensorFlow', icon: SiTensorflow },
+      { name: 'Python', icon: SiPython }
+    ]
+  },
+  { 
+    title: 'Tools', 
+    items: [
+      { name: 'Git', icon: SiGit },
+      { name: 'Figma', icon: SiFigma },
+      { name: 'SSIS', icon: SiDotnet },
+      { name: 'SQL Server', icon: SiDotnet },
+      { name: 'PostgreSQL', icon: SiPostgresql }
+    ]
+  },
 ]
 
 const container = {
@@ -58,20 +115,24 @@ export function Skills() {
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
             <div className="relative z-10">
               <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">{g.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {g.items.map((item) => (
-                  <motion.span
-                    key={item}
-                    initial={{ opacity: 0.9 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true, margin: '-20px' }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
-                    whileHover={{ scale: 1.1, backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
-                    className="rounded-full border border-blue-400/40 bg-blue-100/80 dark:bg-blue-500/10 backdrop-blur-sm px-4 py-2 text-xs font-medium text-blue-700 dark:text-blue-300 transition-all duration-300 cursor-default"
-                  >
-                    {item}
-                  </motion.span>
-                ))}
+              <div className="flex flex-wrap gap-3">
+                {g.items.map((item) => {
+                  const IconComponent = item.icon
+                  return (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0.9 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true, margin: '-20px' }}
+                      transition={{ duration: 0.4, ease: 'easeOut' }}
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      className="flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-100/80 dark:bg-blue-500/10 backdrop-blur-sm px-4 py-2 transition-all duration-300 cursor-default group"
+                    >
+                      <IconComponent className="text-lg text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs font-medium text-blue-700 dark:text-blue-300">{item.name}</span>
+                    </motion.div>
+                  )
+                })}
               </div>
             </div>
           </motion.div>
@@ -80,5 +141,3 @@ export function Skills() {
     </section>
   )
 }
-
-
