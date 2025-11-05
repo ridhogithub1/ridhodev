@@ -1,12 +1,18 @@
 import { useMemo, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { allProjects, type Project } from '../data/projects'
 import { ProjectModal } from '../components/ProjectModal'
+
+const INITIAL_SHOW_COUNT = 6
 
 export function Projects() {
   const items = allProjects
   const [selected, setSelected] = useState<Project | null>(null)
+  const [showAll, setShowAll] = useState(false)
   const isOpen = useMemo(() => !!selected, [selected])
+  
+  const displayedProjects = showAll ? items : items.slice(0, INITIAL_SHOW_COUNT)
+  const hasMore = items.length > INITIAL_SHOW_COUNT
 
   return (
     <section id="projects" className="py-24 relative min-h-[400px] w-full overflow-x-hidden">
@@ -21,10 +27,11 @@ export function Projects() {
       </motion.h2>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.length === 0 ? (
+        {displayedProjects.length === 0 ? (
           <p className="text-gray-600 dark:text-foreground/70 text-center col-span-full">No projects available.</p>
         ) : (
-          items.map((p, index) => (
+          <AnimatePresence mode="popLayout">
+            {displayedProjects.map((p, index) => (
             <motion.article
               key={p.title}
               initial={{ opacity: 0.8, y: 10 }}
@@ -59,10 +66,30 @@ export function Projects() {
                 </motion.button>
               </div>
             </div>
-          </motion.article>
-        ))
+            </motion.article>
+            ))}
+          </AnimatePresence>
         )}
       </div>
+
+      {hasMore && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 flex justify-center"
+        >
+          <motion.button
+            onClick={() => setShowAll(!showAll)}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)' }}
+            whileTap={{ scale: 0.95 }}
+            className="rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:from-blue-500 hover:to-blue-600"
+          >
+            {showAll ? 'Lihat Lebih Sedikit' : 'Lihat Lebih Banyak'}
+          </motion.button>
+        </motion.div>
+      )}
 
       <ProjectModal open={isOpen} project={selected} onClose={() => setSelected(null)} />
     </section>

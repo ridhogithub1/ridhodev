@@ -65,9 +65,7 @@ export function Hero() {
             View My Work
           </motion.a>
           <motion.a
-            href="https://wa.me/6281996663358"
-            target="_blank"
-            rel="noreferrer"
+            href="#contact"
             whileHover={{ scale: 1.05, borderColor: 'rgba(96, 165, 250, 0.5)' }}
             whileTap={{ scale: 0.95 }}
             className="rounded-lg border-2 border-blue-500/50 bg-blue-500/10 backdrop-blur-sm px-8 py-4 text-sm font-semibold text-blue-600 dark:text-blue-300 transition-all duration-300 hover:bg-blue-500/20 hover:border-blue-400"
