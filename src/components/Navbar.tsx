@@ -53,18 +53,6 @@ export function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <motion.a
-            href="/Muhammad-Ridho-Resume.pdf"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)' }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-medium text-white shadow-glow transition-all duration-300 hover:from-blue-500 hover:to-blue-600 md:block"
-            download
-          >
-            Download Resume
-          </motion.a>
           <ThemeToggle />
         </div>
       </div>

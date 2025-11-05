@@ -1,6 +1,23 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const subject = encodeURIComponent(`Contact from ${formData.name}`)
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
+    window.location.href = `mailto:ridho22ti@mahasiswa.pcr.ac.id?subject=${subject}&body=${body}`
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
   return (
     <section id="contact" className="py-24 relative">
       <motion.h2
@@ -18,8 +35,7 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          action="https://formspree.io/f/mayzkjll"
-          method="POST"
+          onSubmit={handleSubmit}
           className="relative rounded-2xl border border-gray-200 dark:border-white/10 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/80 dark:from-blue-900/20 dark:via-blue-800/10 dark:to-blue-900/20 backdrop-blur-sm p-8 shadow-lg dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden"
         >
           {/* Glass effect overlay */}
@@ -30,6 +46,8 @@ export function Contact() {
               whileFocus={{ scale: 1.02 }}
               type="text"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your name"
               required
               className="rounded-lg border border-blue-300/50 dark:border-blue-500/30 bg-blue-50/80 dark:bg-blue-500/10 backdrop-blur-sm px-5 py-3 text-gray-700 dark:text-foreground placeholder:text-gray-400 dark:placeholder:text-foreground/50 outline-none transition-all duration-300 focus:border-blue-500 dark:focus:border-blue-400 focus:bg-blue-100 dark:focus:bg-blue-500/20 focus:shadow-glow"
@@ -38,6 +56,8 @@ export function Contact() {
               whileFocus={{ scale: 1.02 }}
               type="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your email"
               required
               className="rounded-lg border border-blue-300/50 dark:border-blue-500/30 bg-blue-50/80 dark:bg-blue-500/10 backdrop-blur-sm px-5 py-3 text-gray-700 dark:text-foreground placeholder:text-gray-400 dark:placeholder:text-foreground/50 outline-none transition-all duration-300 focus:border-blue-500 dark:focus:border-blue-400 focus:bg-blue-100 dark:focus:bg-blue-500/20 focus:shadow-glow"
@@ -45,6 +65,8 @@ export function Contact() {
             <motion.textarea
               whileFocus={{ scale: 1.02 }}
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your message"
               required
               rows={5}
@@ -78,7 +100,7 @@ export function Contact() {
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="mailto:muhammadridho@example.com">
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="mailto:ridho22ti@mahasiswa.pcr.ac.id">
                   <span className="text-lg">📧</span> Email
                 </a>
               </motion.li>
