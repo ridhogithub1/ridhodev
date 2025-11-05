@@ -125,7 +125,7 @@ export function Contact() {
                 className="transition-all duration-300"
               >
                 <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.instagram.com/mhmmdrdo" target="_blank" rel="noreferrer">
-                  <span className="text-lg">📷</span> Instagram (@mhmmdrdo)
+                  <span className="text-lg">📷</span> Instagram
                 </a>
               </motion.li>
               <motion.li

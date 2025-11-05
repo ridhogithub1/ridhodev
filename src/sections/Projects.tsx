@@ -86,7 +86,7 @@ export function Projects() {
             whileTap={{ scale: 0.95 }}
             className="rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:from-blue-500 hover:to-blue-600"
           >
-            {showAll ? 'Lihat Lebih Sedikit' : 'Lihat Lebih Banyak'}
+            {showAll ? 'Show Less' : 'View More'}
           </motion.button>
         </motion.div>
       )}
