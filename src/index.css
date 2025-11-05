@@ -5,9 +5,21 @@
 /* App shell background/text defaults */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   @apply bg-white text-neutral-900 antialiased dark:bg-gradient-to-br dark:from-[#0a1628] dark:via-[#0f1b35] dark:to-[#152243] dark:text-foreground;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Root element */
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Custom scrollbar */

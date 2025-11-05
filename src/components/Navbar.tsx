@@ -15,10 +15,10 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="sticky top-0 z-50 w-full"
+      className="sticky top-0 z-50 w-full overflow-x-hidden"
     >
       {/* Liquid Glass Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/80 via-blue-50/90 to-blue-100/80 dark:from-blue-900/20 dark:via-blue-800/30 dark:to-blue-900/20 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 shadow-sm dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/80 via-blue-50/90 to-blue-100/80 dark:from-blue-900/20 dark:via-blue-800/30 dark:to-blue-900/20 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 shadow-sm dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent dark:from-white/5"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.15),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.1),transparent_50%)]"></div>
       </div>

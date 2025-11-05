@@ -19,7 +19,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-24 relative w-full overflow-x-hidden">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

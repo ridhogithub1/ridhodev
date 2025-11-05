@@ -9,7 +9,7 @@ export function Projects() {
   const isOpen = useMemo(() => !!selected, [selected])
 
   return (
-    <section id="projects" className="py-24 relative min-h-[400px]">
+    <section id="projects" className="py-24 relative min-h-[400px] w-full overflow-x-hidden">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

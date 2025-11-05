@@ -29,7 +29,7 @@ const item = {
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-24 relative w-full overflow-x-hidden">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
