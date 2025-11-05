@@ -48,7 +48,7 @@ export function Contact() {
               placeholder="Your message"
               required
               rows={5}
-              className="rounded-lg border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm px-5 py-3 text-foreground placeholder:text-foreground/50 outline-none transition-all duration-300 focus:border-blue-400 focus:bg-blue-500/20 focus:shadow-glow resize-none"
+              className="rounded-lg border border-blue-300/50 dark:border-blue-500/30 bg-blue-50/80 dark:bg-blue-500/10 backdrop-blur-sm px-5 py-3 text-gray-700 dark:text-foreground placeholder:text-gray-400 dark:placeholder:text-foreground/50 outline-none transition-all duration-300 focus:border-blue-500 dark:focus:border-blue-400 focus:bg-blue-100 dark:focus:bg-blue-500/20 focus:shadow-glow resize-none"
             />
             <motion.button
               type="submit"
@@ -86,7 +86,7 @@ export function Contact() {
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.linkedin.com/in/muhammad-ridho-35047a326/" target="_blank" rel="noreferrer">
                   <span className="text-lg">💼</span> LinkedIn
                 </a>
               </motion.li>
@@ -94,9 +94,35 @@ export function Contact() {
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://github.com/" target="_blank" rel="noreferrer">
-                  <span className="text-lg">💻</span> GitHub
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://wa.me/6281996663358" target="_blank" rel="noreferrer">
+                  <span className="text-lg">💬</span> WhatsApp
                 </a>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5, scale: 1.05 }}
+                className="transition-all duration-300"
+              >
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.instagram.com/mhmmdrdo" target="_blank" rel="noreferrer">
+                  <span className="text-lg">📷</span> Instagram (@mhmmdrdo)
+                </a>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5, scale: 1.05 }}
+                className="transition-all duration-300"
+              >
+                <div className="flex flex-col gap-2">
+                  <span className="text-blue-600 dark:text-blue-400 font-medium flex items-center gap-2">
+                    <span className="text-lg">💻</span> GitHub
+                  </span>
+                  <div className="ml-7 flex flex-col gap-2">
+                    <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm transition-colors duration-300" href="https://github.com/ridhogithub1" target="_blank" rel="noreferrer">
+                      • ridhogithub1
+                    </a>
+                    <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm transition-colors duration-300" href="https://github.com/RidhoIT" target="_blank" rel="noreferrer">
+                      • RidhoIT
+                    </a>
+                  </div>
+                </div>
               </motion.li>
             </ul>
           </div>

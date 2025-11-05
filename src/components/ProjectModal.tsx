@@ -1,4 +1,5 @@
-import { Fragment, ReactNode, useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
+import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Project } from '../data/projects'
