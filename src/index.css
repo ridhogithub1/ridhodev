@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App shell background/text defaults */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-white text-neutral-900 antialiased dark:bg-gradient-to-br dark:from-[#0a1628] dark:via-[#0f1b35] dark:to-[#152243] dark:text-foreground;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-[#0a1628];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400 rounded-full dark:bg-[#3b82f6];
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-500 dark:bg-[#60a5fa];
+}
