@@ -10,7 +10,7 @@ export type Project = {
 }
 
 const projects: Project[] = [
-  // Website Arabic Morphology - Paling Atas
+  // Website Arabic Morphology
   { 
     slug: 'arabic-morphology', 
     title: 'Website Arabic Morphology', 
@@ -18,12 +18,12 @@ const projects: Project[] = [
     description: 'Morphological parsing and educational interface for Arabic language analysis with interactive visualization and comprehensive rule sets.', 
     role: 'Full-Stack', 
     highlights: [
-      'Morphological parsing engine dengan rule-based system',
-      'Interactive UI untuk visualisasi struktur kata',
-      'Educational interface dengan penjelasan detail',
-      'Database komprehensif untuk root words dan patterns',
-      'Real-time analysis dan parsing',
-      'Export hasil analisis ke berbagai format'
+      'Morphological parsing engine with rule-based system',
+      'Interactive UI for word structure visualization',
+      'Educational interface with detailed explanations',
+      'Comprehensive database for root words and patterns',
+      'Real-time analysis and parsing',
+      'Export analysis results to various formats'
     ], 
     links: [] 
   },
@@ -35,12 +35,12 @@ const projects: Project[] = [
     description: 'Arabic text analysis tooling with morphology rules, tokenization, and advanced linguistic features.', 
     role: 'Full-Stack', 
     highlights: [
-      'Advanced tokenizer untuk teks bahasa Arab',
-      'Morphological rules engine yang komprehensif',
-      'POS tagging dan syntactic analysis',
-      'Search dan filter berdasarkan kategori',
-      'User-friendly interface dengan responsive design',
-      'API integration untuk eksternal tools'
+      'Advanced tokenizer for Arabic text',
+      'Comprehensive morphological rules engine',
+      'POS tagging and syntactic analysis',
+      'Search and filter by category',
+      'User-friendly interface with responsive design',
+      'API integration for external tools'
     ], 
     links: [] 
   },
@@ -52,13 +52,13 @@ const projects: Project[] = [
     description: 'Safety reporting solutions across web and mobile platforms for incident management and analytics.', 
     role: 'Full-Stack', 
     highlights: [
-      'Incident submission system dengan foto dan lokasi',
-      'Real-time analytics dashboard dengan charts',
-      'Notification system untuk update status',
+      'Incident submission system with photo and location',
+      'Real-time analytics dashboard with charts',
+      'Notification system for status updates',
       'Role-based access control (Admin, User, Manager)',
-      'Mobile app dengan offline capability',
-      'Report generation dan export ke PDF/Excel',
-      'Timeline tracking untuk setiap incident'
+      'Mobile app with offline capability',
+      'Report generation and export to PDF/Excel',
+      'Timeline tracking for each incident'
     ], 
     links: [] 
   },
@@ -70,13 +70,13 @@ const projects: Project[] = [
     description: 'Admin web portal exploration for service management with comprehensive features and role management.', 
     role: 'Frontend', 
     highlights: [
-      'Advanced data table dengan sorting dan filtering',
-      'Pagination dan search functionality',
+      'Advanced data table with sorting and filtering',
+      'Pagination and search functionality',
       'Role-based authentication (mock)',
-      'Dashboard dengan statistics dan charts',
-      'Bulk operations untuk data management',
-      'Export data ke CSV/Excel',
-      'Responsive design untuk mobile dan desktop'
+      'Dashboard with statistics and charts',
+      'Bulk operations for data management',
+      'Export data to CSV/Excel',
+      'Responsive design for mobile and desktop'
     ], 
     links: [] 
   },
@@ -88,13 +88,13 @@ const projects: Project[] = [
     description: 'Research and prototyping of admin features on mobile platform with API integration.', 
     role: 'Full-Stack', 
     highlights: [
-      'R&D features untuk mobile admin functionality',
-      'RESTful API integration dengan authentication',
+      'R&D features for mobile admin functionality',
+      'RESTful API integration with authentication',
       'Offline data synchronization',
-      'Push notifications untuk updates',
+      'Push notifications for updates',
       'Biometric authentication support',
-      'Dark mode dan theme customization',
-      'Local database dengan Room persistence'
+      'Dark mode and theme customization',
+      'Local database with Room persistence'
     ], 
     links: [] 
   },
@@ -106,12 +106,12 @@ const projects: Project[] = [
     description: 'Time-series forecasting experiments for stock price trends using machine learning models.', 
     role: 'Data Scientist', 
     highlights: [
-      'Feature engineering dari historical data',
+      'Feature engineering from historical data',
       'Multiple forecasting models (LSTM, ARIMA, Prophet)',
-      'Model evaluation dengan metrics (MAE, RMSE, MAPE)',
-      'Data visualization dengan interactive charts',
-      'Automated pipeline untuk data preprocessing',
-      'Backtesting dan validation techniques',
+      'Model evaluation with metrics (MAE, RMSE, MAPE)',
+      'Data visualization with interactive charts',
+      'Automated pipeline for data preprocessing',
+      'Backtesting and validation techniques',
       'Performance comparison dashboard'
     ], 
     links: [] 
@@ -124,13 +124,13 @@ const projects: Project[] = [
     description: 'Computer vision model to detect mask usage with real-time inference capabilities.', 
     role: 'CV Engineer', 
     highlights: [
-      'Dataset collection dan preprocessing (5000+ images)',
+      'Dataset collection and preprocessing (5000+ images)',
       'Data augmentation techniques (rotation, flip, brightness)',
-      'CNN model training dengan transfer learning',
-      'Real-time inference dengan webcam integration',
-      'Accuracy metrics dan confusion matrix',
-      'Model optimization untuk mobile deployment',
-      'Batch processing untuk multiple detections'
+      'CNN model training with transfer learning',
+      'Real-time inference with webcam integration',
+      'Accuracy metrics and confusion matrix',
+      'Model optimization for mobile deployment',
+      'Batch processing for multiple detections'
     ], 
     links: [] 
   },
@@ -142,13 +142,13 @@ const projects: Project[] = [
     description: 'NLP pipeline and sentiment model for social media data analysis with comprehensive preprocessing.', 
     role: 'ML Engineer', 
     highlights: [
-      'Web scraping dari multiple social media platforms',
-      'Data preprocessing dan text cleaning',
+      'Web scraping from multiple social media platforms',
+      'Data preprocessing and text cleaning',
       'Sentiment classification model (Positive, Negative, Neutral)',
-      'Model evaluation dengan accuracy dan F1-score',
-      'Visualization dashboard dengan sentiment distribution',
-      'Time-series analysis untuk trend tracking',
-      'Export results ke CSV untuk further analysis'
+      'Model evaluation with accuracy and F1-score',
+      'Visualization dashboard with sentiment distribution',
+      'Time-series analysis for trend tracking',
+      'Export results to CSV for further analysis'
     ], 
     links: [] 
   },
@@ -160,13 +160,13 @@ const projects: Project[] = [
     description: 'Mobile app for coffee ordering and loyalty program with modern UI/UX design.', 
     role: 'Mobile Dev', 
     highlights: [
-      'User authentication dengan email dan phone',
-      'Menu browsing dengan kategori dan search',
-      'Shopping cart dengan add/remove items',
-      'Order placement dengan multiple payment methods',
-      'Loyalty points system dengan rewards',
-      'Order history dan tracking status',
-      'Push notifications untuk promotions'
+      'User authentication with email and phone',
+      'Menu browsing with category and search',
+      'Shopping cart with add/remove items',
+      'Order placement with multiple payment methods',
+      'Loyalty points system with rewards',
+      'Order history and tracking status',
+      'Push notifications for promotions'
     ], 
     links: [] 
   },
@@ -178,13 +178,13 @@ const projects: Project[] = [
     description: 'GIS-powered barbershop locator with interactive map and location-based search features.', 
     role: 'Full-Stack', 
     highlights: [
-      'Interactive map dengan marker untuk setiap barbershop',
-      'Location-based search dengan radius filter',
-      'Route calculation dan directions',
-      'Barbershop details dengan rating dan reviews',
-      'Photo gallery untuk setiap location',
-      'Booking system dengan calendar integration',
-      'Admin panel untuk manage locations'
+      'Interactive map with markers for each barbershop',
+      'Location-based search with radius filter',
+      'Route calculation and directions',
+      'Barbershop details with rating and reviews',
+      'Photo gallery for each location',
+      'Booking system with calendar integration',
+      'Admin panel to manage locations'
     ], 
     links: [] 
   },
@@ -196,49 +196,49 @@ const projects: Project[] = [
     description: 'Action game prototype with character controls, levels, and enemy AI system.', 
     role: 'Developer', 
     highlights: [
-      'Character controller dengan smooth movement',
-      'Multiple levels dengan different difficulty',
-      'Basic enemy AI dengan patrol dan chase behavior',
-      'Weapon system dengan shooting mechanics',
-      'Health system dan damage calculation',
-      'UI untuk score, health, dan ammo',
-      'Particle effects untuk explosions dan impacts'
+      'Character controller with smooth movement',
+      'Multiple levels with different difficulty',
+      'Basic enemy AI with patrol and chase behavior',
+      'Weapon system with shooting mechanics',
+      'Health system and damage calculation',
+      'UI for score, health, and ammo',
+      'Particle effects for explosions and impacts'
     ], 
     links: [] 
   },
   // Sistem Pengaduan Masyarakat Pekanbaru
   { 
     slug: 'pengaduan-pekanbaru', 
-    title: 'Sistem Pengaduan Masyarakat Pekanbaru', 
+    title: 'Public Complaint System Pekanbaru', 
     stack: 'PHP', 
     description: 'Public complaint system for reporting and tracking cases with comprehensive management features.', 
     role: 'Full-Stack', 
     highlights: [
-      'Pelaporan dengan upload foto dan dokumen',
-      'Tracking system dengan status updates',
+      'Report submission with photo and document upload',
+      'Tracking system with status updates',
       'Role-based access (Admin, Staff, Public)',
       'Category-based complaint classification',
-      'Notification system via email dan SMS',
-      'Analytics dashboard untuk admin',
-      'Report generation dengan filtering options'
+      'Notification system via email and SMS',
+      'Analytics dashboard for admin',
+      'Report generation with filtering options'
     ], 
     links: [] 
   },
   // UI/UX Aplikasi Layanan Kesehatan
   { 
     slug: 'health-ux', 
-    title: 'UI/UX Aplikasi Layanan Kesehatan', 
+    title: 'Health Services App UI/UX', 
     stack: 'Figma', 
     description: 'Design system and prototype for health services app with comprehensive user flows.', 
     role: 'Designer', 
     highlights: [
-      'Complete design system dengan color palette',
-      'Component library untuk reusable elements',
-      'Prototype user flow untuk main features',
-      'User research dan persona development',
-      'Wireframing dan low-fidelity mockups',
-      'High-fidelity designs dengan animations',
-      'Design handoff documentation untuk developers'
+      'Complete design system with color palette',
+      'Component library for reusable elements',
+      'Prototype user flow for main features',
+      'User research and persona development',
+      'Wireframing and low-fidelity mockups',
+      'High-fidelity designs with animations',
+      'Design handoff documentation for developers'
     ], 
     links: [] 
   },
@@ -250,31 +250,31 @@ const projects: Project[] = [
     description: 'Insights dashboard for safety reporting data with interactive visualizations and filters.', 
     role: 'Developer', 
     highlights: [
-      'Interactive charts dengan Chart.js integration',
+      'Interactive charts with Chart.js integration',
       'Multiple chart types (line, bar, pie, map)',
-      'Dynamic filtering berdasarkan date range dan category',
-      'Real-time data updates dari database',
-      'Export charts ke PNG dan PDF',
-      'Drill-down functionality untuk detail analysis',
-      'Responsive design untuk all screen sizes'
+      'Dynamic filtering by date range and category',
+      'Real-time data updates from database',
+      'Export charts to PNG and PDF',
+      'Drill-down functionality for detail analysis',
+      'Responsive design for all screen sizes'
     ], 
     links: [] 
   },
   // Sistem Lomba PCR
   { 
     slug: 'sistem-lomba-pcr', 
-    title: 'Sistem Lomba PCR', 
+    title: 'PCR Competition System', 
     stack: 'PHP', 
     description: 'Competition management system for registration and scoring with automated ranking.', 
     role: 'Full-Stack', 
     highlights: [
-      'Online registration system dengan form validation',
-      'Participant management dengan CRUD operations',
-      'Automated scoring system dengan multiple criteria',
+      'Online registration system with form validation',
+      'Participant management with CRUD operations',
+      'Automated scoring system with multiple criteria',
       'Real-time ranking calculation',
-      'Certificate generation untuk winners',
-      'Email notifications untuk registration confirmation',
-      'Admin panel untuk manage competitions'
+      'Certificate generation for winners',
+      'Email notifications for registration confirmation',
+      'Admin panel to manage competitions'
     ], 
     links: [] 
   },
@@ -286,36 +286,34 @@ const projects: Project[] = [
     description: 'E-commerce platform for craft products with shopping cart and checkout process.', 
     role: 'Frontend', 
     highlights: [
-      'Product catalog dengan kategori dan search',
-      'Shopping cart dengan add/remove/update items',
-      'User authentication dan profile management',
-      'Order placement dengan checkout flow',
-      'Payment integration (mock) dengan multiple methods',
-      'Order history dan tracking',
-      'Admin panel untuk manage products dan orders'
+      'Product catalog with category and search',
+      'Shopping cart with add/remove/update items',
+      'User authentication and profile management',
+      'Order placement with checkout flow',
+      'Payment integration (mock) with multiple methods',
+      'Order history and tracking',
+      'Admin panel to manage products and orders'
     ], 
     links: [] 
   },
-  // Aplikasi Kasir Sederhana - Paling Bawah
+  // Aplikasi Kasir Sederhana
   { 
     slug: 'kasir-sederhana', 
-    title: 'Aplikasi Kasir Sederhana', 
+    title: 'Simple Cashier Application', 
     stack: 'Java', 
     description: 'Point-of-sale desktop application with basic inventory management and sales reporting.', 
     role: 'Developer', 
     highlights: [
-      'CRUD operations untuk inventory management',
-      'Transaction processing dengan receipt generation',
-      'Sales report dengan daily/monthly summaries',
-      'Product search dan barcode scanning support',
-      'Cashier interface dengan keyboard shortcuts',
-      'Data backup dan restore functionality',
-      'Print receipt dengan thermal printer support'
+      'CRUD operations for inventory management',
+      'Transaction processing with receipt generation',
+      'Sales report with daily/monthly summaries',
+      'Product search and barcode scanning support',
+      'Cashier interface with keyboard shortcuts',
+      'Data backup and restore functionality',
+      'Print receipt with thermal printer support'
     ], 
     links: [] 
   },
 ]
 
 export const allProjects: Project[] = projects
-
-
