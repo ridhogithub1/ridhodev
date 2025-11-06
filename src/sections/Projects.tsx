@@ -1,15 +1,12 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { allProjects, type Project } from '../data/projects'
-import { ProjectModal } from '../components/ProjectModal'
+import { allProjects } from '../data/projects'
 
 const INITIAL_SHOW_COUNT = 6
 
 export function Projects() {
   const items = allProjects
-  const [selected, setSelected] = useState<Project | null>(null)
   const [showAll, setShowAll] = useState(false)
-  const isOpen = useMemo(() => !!selected, [selected])
   
   const displayedProjects = showAll ? items : items.slice(0, INITIAL_SHOW_COUNT)
   const hasMore = items.length > INITIAL_SHOW_COUNT
@@ -39,7 +36,7 @@ export function Projects() {
               viewport={{ once: false, amount: 0.05, margin: '-100px 0px' }}
               transition={{ delay: Math.min(index * 0.03, 0.2), duration: 0.4, ease: 'easeOut' }}
               whileHover={{ scale: 1.03, y: -8 }}
-              className="group relative rounded-2xl border border-gray-200 dark:border-white/10 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/80 dark:from-blue-900/20 dark:via-blue-800/10 dark:to-blue-900/20 backdrop-blur-sm p-6 shadow-lg dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden transition-all duration-300 min-h-[200px] opacity-100"
+              className="group relative rounded-2xl border border-gray-200 dark:border-white/10 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/80 dark:from-blue-900/20 dark:via-blue-800/10 dark:to-blue-900/20 backdrop-blur-sm p-6 shadow-lg dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden transition-all duration-300 opacity-100"
             >
             {/* Glass effect overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
@@ -47,24 +44,47 @@ export function Projects() {
             <div className="relative z-10">
               <h3 className="text-lg font-bold text-blue-700 dark:text-blue-300 mb-2">{p.title}</h3>
               <p className="mt-1 text-xs uppercase tracking-wide text-blue-600/70 dark:text-blue-400/70 font-medium">{p.stack}</p>
+              {p.role && (
+                <p className="mt-2 text-xs text-blue-600/80 dark:text-blue-400/80 font-medium">Role: {p.role}</p>
+              )}
               <p className="mt-4 text-sm text-gray-600 dark:text-foreground/80 leading-relaxed">{p.description}</p>
-              <div className="mt-6">
-                <motion.button
-                  onClick={() => setSelected(p)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300 flex items-center gap-2 group-hover:gap-3"
-                >
-                  View Details
-                  <motion.span
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    →
-                  </motion.span>
-                </motion.button>
-              </div>
+              
+              {p.highlights && p.highlights.length > 0 && (
+                <div className="mt-4">
+                  <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-2">Key Features:</p>
+                  <ul className="space-y-1">
+                    {p.highlights.slice(0, 3).map((highlight, idx) => (
+                      <li key={idx} className="text-xs text-gray-600 dark:text-foreground/70 flex items-start gap-2">
+                        <span className="text-blue-500 dark:text-blue-400 mt-1">•</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                    {p.highlights.length > 3 && (
+                      <li className="text-xs text-blue-600/70 dark:text-blue-400/70 italic">
+                        +{p.highlights.length - 3} more features
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              )}
+
+              {p.links && p.links.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.links.map((link) => (
+                    <motion.a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline-offset-2 hover:underline transition-colors duration-300"
+                    >
+                      {link.label} →
+                    </motion.a>
+                  ))}
+                </div>
+              )}
             </div>
             </motion.article>
             ))}
@@ -91,7 +111,6 @@ export function Projects() {
         </motion.div>
       )}
 
-      <ProjectModal open={isOpen} project={selected} onClose={() => setSelected(null)} />
     </section>
   )
 }
