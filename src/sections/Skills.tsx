@@ -13,7 +13,21 @@ import {
   SiPython,
   SiGit,
   SiFigma,
-  SiPostgresql
+  SiPostgresql,
+  SiFlask,
+  SiMysql,
+  SiNodedotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiVuedotjs,
+  SiExpress,
+  SiMongodb,
+  SiDocker,
+  SiAmazon,
+  SiRedis,
+  SiJquery,
+  SiNextdotjs
 } from 'react-icons/si'
 
 type SkillItem = {
@@ -21,48 +35,48 @@ type SkillItem = {
   icon: React.ComponentType<{ className?: string }>
 }
 
-const groups: { title: string; items: SkillItem[] }[] = [
-  { 
-    title: 'Frontend', 
-    items: [
-      { name: 'React.js', icon: SiReact },
-      { name: 'JavaScript', icon: SiJavascript },
-      { name: 'HTML', icon: SiHtml5 },
-      { name: 'CSS', icon: SiCss3 }
-    ]
-  },
-  { 
-    title: 'Backend', 
-    items: [
-      { name: 'Laravel', icon: SiLaravel },
-      { name: 'PHP', icon: SiPhp },
-      { name: 'ASP.NET', icon: SiDotnet }
-    ]
-  },
-  { 
-    title: 'Mobile', 
-    items: [
-      { name: 'Kotlin (Android)', icon: SiKotlin },
-      { name: 'React Native', icon: SiReactNative }
-    ]
-  },
-  { 
-    title: 'AI/ML', 
-    items: [
-      { name: 'TensorFlow', icon: SiTensorflow },
-      { name: 'Python', icon: SiPython }
-    ]
-  },
-  { 
-    title: 'Tools', 
-    items: [
-      { name: 'Git', icon: SiGit },
-      { name: 'Figma', icon: SiFigma },
-      { name: 'SSIS', icon: SiDotnet },
-      { name: 'SQL Server', icon: SiDotnet },
-      { name: 'PostgreSQL', icon: SiPostgresql }
-    ]
-  },
+const skills: SkillItem[] = [
+  // Frontend
+  { name: 'React.js', icon: SiReact },
+  { name: 'React Native', icon: SiReactNative },
+  { name: 'Next.js', icon: SiNextdotjs },
+  { name: 'Vue.js', icon: SiVuedotjs },
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'HTML', icon: SiHtml5 },
+  { name: 'CSS', icon: SiCss3 },
+  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'Bootstrap', icon: SiBootstrap },
+  { name: 'jQuery', icon: SiJquery },
+  
+  // Backend
+  { name: 'Laravel', icon: SiLaravel },
+  { name: 'PHP', icon: SiPhp },
+  { name: 'ASP.NET', icon: SiDotnet },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'Express', icon: SiExpress },
+  { name: 'Flask', icon: SiFlask },
+  { name: 'Python', icon: SiPython },
+  
+  // Mobile
+  { name: 'Kotlin', icon: SiKotlin },
+  
+  // AI/ML
+  { name: 'TensorFlow', icon: SiTensorflow },
+  
+  // Database
+  { name: 'MySQL', icon: SiMysql },
+  { name: 'PostgreSQL', icon: SiPostgresql },
+  { name: 'MongoDB', icon: SiMongodb },
+  { name: 'Redis', icon: SiRedis },
+  { name: 'SQL Server', icon: SiDotnet },
+  
+  // Tools & Others
+  { name: 'Git', icon: SiGit },
+  { name: 'Docker', icon: SiDocker },
+  { name: 'AWS', icon: SiAmazon },
+  { name: 'Figma', icon: SiFigma },
+  { name: 'SSIS', icon: SiDotnet },
 ]
 
 const container = {
@@ -70,17 +84,17 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.15
+      staggerChildren: 0.05,
+      delayChildren: 0.1
     }
   }
 }
 
 const item = {
-  hidden: { opacity: 0.8, y: 15 },
+  hidden: { opacity: 0.8, scale: 0.9 },
   show: { 
     opacity: 1, 
-    y: 0
+    scale: 1
   }
 }
 
@@ -101,42 +115,25 @@ export function Skills() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1, margin: '-50px' }}
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        className="flex flex-wrap gap-4 justify-center"
       >
-        {groups.map((g) => (
-          <motion.div
-            key={g.title}
-            variants={item}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            whileHover={{ scale: 1.02, y: -5 }}
-            className="relative rounded-2xl border border-gray-200 dark:border-white/10 bg-gradient-to-br from-blue-50/80 via-white to-blue-50/80 dark:from-blue-900/20 dark:via-blue-800/10 dark:to-blue-900/20 backdrop-blur-sm p-6 shadow-lg dark:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] overflow-hidden transition-all duration-300"
-          >
-            {/* Glass effect overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
-            <div className="relative z-10">
-              <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">{g.title}</h3>
-              <div className="flex flex-wrap gap-3">
-                {g.items.map((item) => {
-                  const IconComponent = item.icon
-                  return (
-                    <motion.div
-                      key={item.name}
-                      initial={{ opacity: 0.9 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true, margin: '-20px' }}
-                      transition={{ duration: 0.4, ease: 'easeOut' }}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-100/80 dark:bg-blue-500/10 backdrop-blur-sm px-4 py-2 transition-all duration-300 cursor-default group"
-                    >
-                      <IconComponent className="text-lg text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-xs font-medium text-blue-700 dark:text-blue-300">{item.name}</span>
-                    </motion.div>
-                  )
-                })}
+        {skills.map((skill) => {
+          const IconComponent = skill.icon
+          return (
+            <motion.div
+              key={skill.name}
+              variants={item}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              whileHover={{ scale: 1.15, y: -5 }}
+              className="relative group"
+              title={skill.name}
+            >
+              <div className="rounded-xl border border-blue-400/40 bg-blue-100/80 dark:bg-blue-500/10 backdrop-blur-sm p-4 transition-all duration-300 cursor-default shadow-md hover:shadow-glow">
+                <IconComponent className="text-3xl text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          )
+        })}
       </motion.div>
     </section>
   )
