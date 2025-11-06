@@ -7,6 +7,10 @@
   </defs>
   <!-- Background circle -->
   <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
-  <!-- Text MR -->
-  <text x="50" y="68" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">MR</text>
+  
+  <!-- Letter M -->
+  <path d="M 18 35 L 18 65 L 24 65 L 24 42 L 32 52 L 32 65 L 38 65 L 38 42 L 46 52 L 46 35 L 40 35 L 35 43 L 30 35 Z" fill="white"/>
+  
+  <!-- Letter R -->
+  <path d="M 54 35 L 54 65 L 60 65 L 60 52 L 68 52 L 74 65 L 81 65 L 74 50 Q 78 48 78 42 Q 78 35 70 35 Z M 60 41 L 70 41 Q 72 41 72 43 Q 72 46 70 46 L 60 46 Z" fill="white"/>
 </svg>
