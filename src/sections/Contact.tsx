@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { MdEmail } from 'react-icons/md'
+import { SiLinkedin, SiWhatsapp, SiInstagram, SiGithub } from 'react-icons/si'
 
 export function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -100,32 +102,32 @@ export function Contact() {
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="mailto:ridho22ti@mahasiswa.pcr.ac.id">
-                  <span className="text-lg">📧</span> Email
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-3 transition-colors duration-300" href="mailto:ridho22ti@mahasiswa.pcr.ac.id">
+                  <MdEmail className="text-xl" /> Email
                 </a>
               </motion.li>
               <motion.li
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.linkedin.com/in/muhammad-ridho-35047a326/" target="_blank" rel="noreferrer">
-                  <span className="text-lg">💼</span> LinkedIn
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-3 transition-colors duration-300" href="https://www.linkedin.com/in/muhammad-ridho-35047a326/" target="_blank" rel="noreferrer">
+                  <SiLinkedin className="text-xl" /> LinkedIn
                 </a>
               </motion.li>
               <motion.li
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://wa.me/6281996663358" target="_blank" rel="noreferrer">
-                  <span className="text-lg">💬</span> WhatsApp
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-3 transition-colors duration-300" href="https://wa.me/6281996663358" target="_blank" rel="noreferrer">
+                  <SiWhatsapp className="text-xl" /> WhatsApp
                 </a>
               </motion.li>
               <motion.li
                 whileHover={{ x: 5, scale: 1.05 }}
                 className="transition-all duration-300"
               >
-                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-2 transition-colors duration-300" href="https://www.instagram.com/mhmmdrdo" target="_blank" rel="noreferrer">
-                  <span className="text-lg">📷</span> Instagram
+                <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-3 transition-colors duration-300" href="https://www.instagram.com/mhmmdrdo" target="_blank" rel="noreferrer">
+                  <SiInstagram className="text-xl" /> Instagram
                 </a>
               </motion.li>
               <motion.li
@@ -133,8 +135,8 @@ export function Contact() {
                 className="transition-all duration-300"
               >
                 <div className="flex flex-col gap-2">
-                  <span className="text-blue-600 dark:text-blue-400 font-medium flex items-center gap-2">
-                    <span className="text-lg">💻</span> GitHub
+                  <span className="text-blue-600 dark:text-blue-400 font-medium flex items-center gap-3">
+                    <SiGithub className="text-xl" /> GitHub
                   </span>
                   <div className="ml-7 flex flex-col gap-2">
                     <a className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm transition-colors duration-300" href="https://github.com/ridhogithub1" target="_blank" rel="noreferrer">
