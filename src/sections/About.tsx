@@ -24,7 +24,7 @@ export function About() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
           <div className="relative z-10">
             <p className="leading-relaxed text-gray-700 dark:text-foreground/90 text-lg mb-4">
-              I'm a <span className="text-blue-600 dark:text-blue-400 font-semibold">Full-Stack Software Developer</span> with <span className="text-blue-600 dark:text-blue-400 font-semibold">4+ years</span> of experience building end-to-end solutions across web, mobile, and AI. I enjoy designing pragmatic architectures, crafting delightful user experiences, and turning ideas into production-grade software.
+              I'm a <span className="text-blue-600 dark:text-blue-400 font-semibold">Full-Stack Software Developer</span> with <span className="text-blue-600 dark:text-blue-400 font-semibold">3+ years</span> of experience building end-to-end solutions across web, mobile, and AI. I enjoy designing pragmatic architectures, crafting delightful user experiences, and turning ideas into production-grade software.
             </p>
             <p className="leading-relaxed text-gray-700 dark:text-foreground/90 text-lg">
               My toolbelt includes <span className="text-blue-600 dark:text-blue-400 font-semibold">PHP, Java, Kotlin, JavaScript, Python, and C#</span>, and I'm especially interested in <span className="text-blue-600 dark:text-blue-400 font-semibold">Web Development, Mobile Apps, Deep Learning, and Data Science</span>.
